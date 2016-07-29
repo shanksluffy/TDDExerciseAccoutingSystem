@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
 #include "MonthPhoneBill.hpp"
 
-class TestGame : public ::testing::Test{
+class MonthPhoneBillTest : public ::testing::Test{
 public:
   void SetUp(){
     //code here be executed before test case
@@ -17,7 +17,7 @@ public:
   FAIL()<<"start from here!";
 }*/
 
-TEST(TestGame, ChooseGolgenWithOneLine)
+TEST(MonthPhoneBillTest, ChooseGolgenWithOneLine)
 {
   EPLAN_TYPE plantype = EPLAN_TYPE_GOLDEN;
   u32 linnum = 1;
@@ -26,7 +26,7 @@ TEST(TestGame, ChooseGolgenWithOneLine)
   EXPECT_EQ(49.95, monthbill);
 }
 
-TEST(TestGame, ChooseGolgenWithTwoLine)
+TEST(MonthPhoneBillTest, ChooseGolgenWithTwoLine)
 {
   EPLAN_TYPE plantype = EPLAN_TYPE_GOLDEN;
   u32 linnum = 2;
@@ -35,7 +35,7 @@ TEST(TestGame, ChooseGolgenWithTwoLine)
   EXPECT_EQ(49.95 + 14.50, monthbill);
 }
 
-TEST(TestGame, ChooseSilverWithOneLine)
+TEST(MonthPhoneBillTest, ChooseSilverWithOneLine)
 {
   EPLAN_TYPE plantype = EPLAN_TYPE_SILVER;
   u32 linnum = 1;
@@ -44,7 +44,7 @@ TEST(TestGame, ChooseSilverWithOneLine)
   EXPECT_EQ(29.95, monthbill);
 }
 
-TEST(TestGame, ChooseGolgenWithThreeLine)
+TEST(MonthPhoneBillTest, ChooseGolgenWithThreeLine)
 {
   EPLAN_TYPE plantype = EPLAN_TYPE_SILVER;
   u32 linnum = 3;
